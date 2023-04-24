@@ -102,7 +102,7 @@ function PlacementCalculator(options) {
 				max,
 				num;
 
-			if (options.limitTopBottom) {
+			if (options && options.limitTopBottom) {
 				if (session.windowHeight - tipHeight > 10) {
 					max = Math.max(position.top - (tipHeight / 2), windowTop + 10);
 					num = windowTop + session.windowHeight - tipHeight - 20;
