@@ -11,8 +11,9 @@
  * Creates a new Placement Calculator.
  * @private
  * @constructor
+ * @param {Object} options Options object containing settings
  */
-function PlacementCalculator() {
+function PlacementCalculator(options) {
 	/**
 	 * Compute the CSS position to display a tooltip at the specified placement
 	 * relative to the specified element.
@@ -43,15 +44,15 @@ function PlacementCalculator() {
 				break;
 			case 'e':
 				coords.set('left', position.left + offset);
-				coords.set('top', position.top - (tipHeight / 2));
+				coords.set('top', computeTopPosition());
 				break;
 			case 's':
 				coords.set('left', position.left - (tipWidth / 2));
 				coords.set('top', position.top + offset);
 				break;
 			case 'w':
-				coords.set('top', position.top - (tipHeight / 2));
 				coords.set('right', session.windowWidth - position.left + offset);
+				coords.set('top', computeTopPosition());
 				break;
 			case 'nw':
 				coords.set('bottom', session.windowHeight - position.top + offset);
@@ -85,6 +86,31 @@ function PlacementCalculator() {
 				coords.set('top', position.top + offset);
 				coords.set('right', session.windowWidth - position.left);
 				break;
+		}
+
+		/**
+		 * Computes the top position
+		 * When 'limitTopBottom' option is specified:
+		 * 1. if tooltip height is less than window height, the tooltip will be positioned
+		 * within window top/bottom boundaries
+		 * 2. if tooltip height is bigger than window height, the bottom of the tooltip will go
+		 * beyond window's bottom
+		 * @return {number} computed top position
+		 */
+		function computeTopPosition() {
+			var windowTop = $window.scrollTop(),
+				max,
+				num;
+
+			if (options.limitTopBottom) {
+				if (session.windowHeight - tipHeight > 10) {
+					max = Math.max(position.top - (tipHeight / 2), windowTop + 10);
+					num = windowTop + session.windowHeight - tipHeight - 20;
+					return Math.min(max, num);
+				}
+				return windowTop + 10;
+			}
+			return position.top - (tipHeight / 2);
 		}
 
 		return coords;

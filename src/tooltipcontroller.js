@@ -14,7 +14,7 @@
  * @param {Object} options Options object containing settings.
  */
 function TooltipController(options) {
-	var placementCalculator = new PlacementCalculator(),
+	var placementCalculator = new PlacementCalculator(options),
 		tipElement = $('#' + options.popupId);
 
 	// build and append tooltip div if it does not already exist

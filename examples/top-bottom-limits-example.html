@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>PowerTip Examples</title>
+	<style type="text/css">
+		#toc { float: left; margin-left: 20px; }
+		#toc-right { float: right; margin-right: 20px; }
+		#content { width: 800px; margin: 0 0 0 380px; }
+		li { margin: 40px 0; }
+
+		#powerTip { cursor: default; background-color: #e8e8e6; -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; border: 1px solid #acacac; border-radius: 6px; color: #000000; display: none; padding: 20px; position: absolute; overflow: hidden; min-width: 320px; max-width: 600px; z-index: 2147483647;
+		}
+	</style>
+	<!-- Include jQuery and PowerTip -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<!-- begin-scripts -->
+	<script type="text/javascript" src="../src/core.js"></script>
+	<script type="text/javascript" src="../src/csscoordinates.js"></script>
+	<script type="text/javascript" src="../src/displaycontroller.js"></script>
+	<script type="text/javascript" src="../src/placementcalculator.js"></script>
+	<script type="text/javascript" src="../src/tooltipcontroller.js"></script>
+	<script type="text/javascript" src="../src/utility.js"></script>
+	<!-- end-scripts -->
+	<!-- <link rel="stylesheet" type="text/css" href="../css/jquery.powertip.css" /> -->
+</head>
+<body>
+	<h1>PowerTip Top/Bottom Limit Examples</h1>
+
+	<div id="toc">
+		<ul>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt3">tooltip bigger than window height</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt3">tooltip bigger than window height</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt3">tooltip bigger than window height</a></li>
+      </ul>
+   </div>
+	
+	<div id="toc-right">
+		<ul>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt3">tooltip bigger than window height</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt3">tooltip bigger than window height</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt2">tooltip within window</a></li>
+        <li><a href="#tt3">tooltip bigger than window height</a></li>
+      </ul>
+   </div>
+
+	<div id="content">
+		<div id="tt2">
+		    <p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+			<p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+			<p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+		</div>
+		<div id="tt3">
+		    <p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+
+			<p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+
+		    <p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+
+		    <p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+
+			<p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+
+			<p>
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			$("a[href]").on('mouseenter', function(e) {
+				const id = $(this).attr('href'),
+					div =$(e.target).parents('div').first(),
+					placement = div.attr('id') === 'toc-right' ? 'w' : 'e';
+
+				$(this).data('powertiptarget', id.substring(1)).powerTip({
+					manual : true,
+					//smartPlacement : true,
+					limitTopBottom : true,
+					placement : placement,
+					offset : 30
+				});
+				$(this).powerTip('show', e);
+
+			}).on('mouseleave', function() {
+				$(this).powerTip('hide', true);
+			});
+		});
+	</script>
+
+</body>
+</html>
