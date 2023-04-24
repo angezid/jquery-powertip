@@ -189,6 +189,7 @@ $.fn.powerTip.defaults = {
 	closeDelay: 100,
 	placement: 'n',
 	smartPlacement: false,
+	limitTopBottom: false,
 	offset: 10,
 	mouseOnToPopup: false,
 	manual: false,
