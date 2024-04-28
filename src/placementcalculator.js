@@ -32,18 +32,16 @@ function PlacementCalculator(options) {
 
 		if (isSvgElement(element)) {
 			position = getSvgPlacement(element, placementBase);
-		} else {
-			//position = getHtmlPlacement(element, placementBase);
+		} else if(options && options.nearCursor) {
 			position = {
 				top: session.currentY,
 				left: session.currentX
 			};
+		} else {
+			position = getHtmlPlacement(element, placementBase);
 		}
-		console.log(element.offset().left, position.left, session.windowWidth, tipWidth, element.width());
-		//if (position.left + element.width() > session.windowWidth) {}
-		if (element.offset().left + element.width() >= session.currentX) {
-			
-		}
+		//console.log(element.offset().left, position.left, session.windowWidth, tipWidth, element.width());
+		//if (element.offset().left + element.width() >= session.currentX) {}
 
 		// calculate the appropriate x and y position in the document
 		switch (placement) {
@@ -139,7 +137,7 @@ function PlacementCalculator(options) {
 			objectHeight = element.outerHeight(),
 			left,
 			top;
-		
+
 		// calculate the appropriate x and y position in the document
 		switch (placement) {
 			case 'n':

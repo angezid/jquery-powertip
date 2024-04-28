@@ -4,12 +4,9 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>PowerTip Examples</title>
 	<style type="text/css">
-		#toc { float: left; margin-left: 20px; }
-		#toc-right { float: right; margin-right: 20px; }
-		#content { width: 800px; margin: 0 0 0 380px; }
 		#tt2, #tt3 { display: none; }
 		li { margin: 40px 0; }
-		#checkbox { padding: 10px;margin-left: 86px; border: #aaa 1px solid; display: inline-block; }
+		#checkbox { padding: 10px; border: #aaa 1px solid; display: inline-block; }
 
 		#powerTip { cursor: default; background-color: #e8e8e6; -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; border: 1px solid #acacac; border-radius: 6px; color: #000000; display: none; padding: 20px; position: absolute; overflow: hidden; min-width: 320px; max-width: 600px; z-index: 2147483647;
 		}
@@ -28,95 +25,55 @@
 	<!-- <link rel="stylesheet" type="text/css" href="../css/jquery.powertip.css" /> -->
 </head>
 <body>
-	<h1>PowerTip Top/Bottom Limit Examples</h1>
+	<h1>PowerTip Lengthy Links Examples</h1>
 	<div id="checkbox">
-		<input type="checkbox" id="limit-top-bottom" checked>
-		<label for="limit-top-bottom">Limit top/bottom tooltip placement</label>
+		<input type="checkbox" id="near-cursor" checked>
+		<label for="near-cursor">Near cursor tooltip placement</label>
 	</div>
-
-	<div id="toc">
-		<ul>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt3">tooltip bigger than window height</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt3">tooltip bigger than window height</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt3">tooltip bigger than window height</a></li>
-      </ul>
-   </div>
-
-	<div id="toc-right">
-		<ul>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt3">tooltip bigger than window height</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt3">tooltip bigger than window height</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt2">tooltip within window</a></li>
-        <li><a href="#tt3">tooltip bigger than window height</a></li>
-      </ul>
-   </div>
 
 	<div id="content">
 		<div id="tt">
 
 			<p>
-		        Lorem <a href="#tt2">tooltip within window</a> ipsum dolor sit amet, consetetur sadipscing <a href="#tt2">tooltip within window</a>,  diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">tooltip within window</a> diam voluptua.
+		        Lorem <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> ipsum dolor sit amet, consetetur sadipscing <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a>,  diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
-		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">tooltip within window</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat,  diam voluptua.<a href="#tt2">tooltip within window</a>
+		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat,  diam voluptua.<a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a>
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		    </p>
 
 			<p>
-		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">tooltip within window</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">tooltip within window</a> diam voluptua.
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
-		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">tooltip within window</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">tooltip within window</a> diam voluptua.
+		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		    </p>
 
 			<p>
-		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">tooltip within window</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">tooltip within window</a> diam voluptua.
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
 		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt3">tooltip bigger than window height</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">tooltip within window</a> diam voluptua.
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		    </p>
 
 			<p>
-		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">tooltip within window</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">tooltip within window</a> diam voluptua.
+		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
-		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">tooltip within window</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">tooltip within window</a> diam voluptua.
+		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		    </p>
@@ -138,8 +95,6 @@
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		    </p>
 		</div>
-
-
 	</div>
 
 	<script type="text/javascript">
@@ -161,21 +116,19 @@
 
 	<script type="text/javascript">
 		$(function() {
-			var limitTopBottom = $('#limit-top-bottom').prop('checked');
+			var posNearCursor = $('#near-cursor').prop('checked');
 
 			$("a[href]").on('mouseenter', function(e) {
 				const id = $(this).attr('href'),
 					offset = $(e.target).offset().left,
 					halfWidth = $(window).width() / 2,
 					placement = e.pageX < halfWidth ? 'e' : 'w';
-					//placement = offset < halfWidth && offset + $(e.target).width() < halfWidth  ? 'e' : 'w';
-
-				//console.log( offset, halfWidth, $(e.target).width());
 
 				$(this).data('powertiptarget', id.substring(1)).powerTip({
 					manual : true,
 					smartPlacement : true,
-					limitTopBottom : limitTopBottom,
+					limitTopBottom : true,
+					nearCursor : posNearCursor,
 					placement : placement,
 					offset : 30
 				});
@@ -185,10 +138,10 @@
 				$(this).powerTip('hide', true);
 			});
 
-			$('#limit-top-bottom').on('change', function() {
-				limitTopBottom = $(this).prop('checked');
-				console.log( limitTopBottom );
+			$('#near-cursor').on('change', function() {
+				posNearCursor = $(this).prop('checked');
 			});
+
 		});
 	</script>
 
