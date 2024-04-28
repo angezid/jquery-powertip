@@ -33,7 +33,16 @@ function PlacementCalculator(options) {
 		if (isSvgElement(element)) {
 			position = getSvgPlacement(element, placementBase);
 		} else {
-			position = getHtmlPlacement(element, placementBase);
+			//position = getHtmlPlacement(element, placementBase);
+			position = {
+				top: session.currentY,
+				left: session.currentX
+			};
+		}
+		console.log(element.offset().left, position.left, session.windowWidth, tipWidth, element.width());
+		//if (position.left + element.width() > session.windowWidth) {}
+		if (element.offset().left + element.width() >= session.currentX) {
+			
 		}
 
 		// calculate the appropriate x and y position in the document
@@ -130,7 +139,7 @@ function PlacementCalculator(options) {
 			objectHeight = element.outerHeight(),
 			left,
 			top;
-
+		
 		// calculate the appropriate x and y position in the document
 		switch (placement) {
 			case 'n':
