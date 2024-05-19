@@ -4,12 +4,14 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>PowerTip Examples</title>
 	<style type="text/css">
-		#tt2, #tt3 { display: none; }
+		body { margin: 40px; }
+		#tt2, #tt3, #source { display: none; }
 		li { margin: 40px 0; }
 		#checkbox { padding: 10px; border: #aaa 1px solid; display: inline-block; }
 
-		#powerTip { cursor: default; background-color: #e8e8e6; -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; border: 1px solid #acacac; border-radius: 6px; color: #000000; display: none; padding: 20px; position: absolute; overflow: hidden; min-width: 320px; max-width: 600px; z-index: 2147483647;
+		#powerTip { cursor: default; background-color: #e8e8e6; -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 4px 4px 20px 0 rgba(0, 0, 0, 0.3), 0 -1px 2px #dcdcdc inset; border: 1px solid #acacac; border-radius: 6px; color: #000000; display: none; padding: 20px; position: absolute; overflow: hidden; min-width: 320px; max-width: 800px; z-index: 2147483647;
 		}
+		
 	</style>
 	<!-- Include jQuery and PowerTip -->
 	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>-->
@@ -25,10 +27,11 @@
 	<!-- <link rel="stylesheet" type="text/css" href="../css/jquery.powertip.css" /> -->
 </head>
 <body>
-	<h1>PowerTip Lengthy Links Examples</h1>
+	<h1>PowerTip near mouse pointer tooltip placement examples</h1>
+	<p><b>When an anchor element width bigger than 1/10 of the screen width it switches to near mouse pointer placement mode.</b></p>
 	<div id="checkbox">
 		<input type="checkbox" id="near-cursor" checked>
-		<label for="near-cursor">Near cursor tooltip placement</label>
+		<label for="near-cursor">Near mouse placement</label>
 	</div>
 
 	<div id="content">
@@ -44,25 +47,14 @@
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		    </p>
-
+			
 			<p>
-		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
+		        Lorem <a href="#tt2">short link</a> ipsum dolor sit amet, consetetur sadipscing <a href="#tt2">short link</a>,  diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">a little longer link</a> diam voluptua.
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
-		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
-		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-		    </p>
-
-			<p>
-		        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
-		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
-		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt3">tooltip bigger than window height</a> diam nonumy eirmod tempor
-		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
+		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">a more longer link abcdef</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat,  diam voluptua.<a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a>
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		    </p>
@@ -74,6 +66,28 @@
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
 		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam nonumy eirmod tempor
 		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a> diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+			
+			<p>
+		        Lorem <a href="#tt2">short link</a> ipsum dolor sit amet, consetetur sadipscing <a href="#tt2">short link</a>,  diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">a little longer link</a> diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">a more longer link abcdef</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat,  diam voluptua.<a href="#tt2">lengthy link abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ</a>
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		    </p>
+			
+			<p>
+		        Lorem <a href="#tt2">short link</a> ipsum dolor sit amet, consetetur sadipscing <a href="#tt2">short link</a>,  diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat, <a href="#tt2">a little longer link</a> diam voluptua.
+		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Lorem ipsum
+		        dolor sit amet, consetetur sadipscing elitr, <a href="#tt2">a more longer link abcdef</a> diam nonumy eirmod tempor
+		        invidunt ut labore et dolore magna aliquyam erat,  diam voluptua.<a href="#tt2">short link</a>
 		        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
 		        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 		    </p>
@@ -116,7 +130,7 @@
 
 	<script type="text/javascript">
 		$(function() {
-			var posNearCursor = $('#near-cursor').prop('checked');
+			var posAtMousePointer = $('#near-cursor').prop('checked');
 
 			$("a[href]").on('mouseenter', function(e) {
 				const id = $(this).attr('href'),
@@ -128,7 +142,8 @@
 					manual : true,
 					smartPlacement : true,
 					limitTopBottom : true,
-					nearCursor : posNearCursor,
+					nearMouse : posAtMousePointer,
+					//followMouse : posAtMousePointer,
 					placement : placement,
 					offset : 30
 				});
@@ -139,7 +154,7 @@
 			});
 
 			$('#near-cursor').on('change', function() {
-				posNearCursor = $(this).prop('checked');
+				posAtMousePointer = $(this).prop('checked');
 			});
 
 		});

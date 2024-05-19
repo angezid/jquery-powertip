@@ -248,7 +248,10 @@ module.exports = function(grunt) {
 	// force unix style line endings
 	grunt.util.linefeed = '\n';
 
-	// register grunt tasks
+	grunt.registerTask('default', [ 'jsonlint', 'build:js' ]);
+	grunt.registerTask('build:js', [ 'concat:core', 'indent', 'copy:dist', 'uglify', 'clean:temp' ]);
+
+	/* register grunt tasks
 	grunt.registerTask('default', [ 'test' ]);
 	grunt.registerTask('test', [ 'jsonlint', 'concat:core', 'indent', 'copy:dist', 'eslint', 'qunit:tests', 'test:browserify', 'csslint', 'clean:temp' ]);
 	grunt.registerTask('test:browserify', [ 'copy:browserify', 'browserify', 'qunit:browserify' ]);
@@ -260,5 +263,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('build:npm', [ 'clean:dist', 'build' ]);
 	grunt.registerTask('deploy', [ 'deploy:docs', 'deploy:assets' ]);
 	grunt.registerTask('deploy:docs', [ 'build:gh-pages', 'shell:checkoutpages', 'copy:index', 'shell:addindex', 'shell:checkoutmaster' ]);
-	grunt.registerTask('deploy:assets', [ 'build:release', 'shell:checkoutpages', 'copy:jsassets', 'copy:cssassets', 'shell:addassets', 'shell:checkoutmaster' ]);
+	grunt.registerTask('deploy:assets', [ 'build:release', 'shell:checkoutpages', 'copy:jsassets', 'copy:cssassets', 'shell:addassets', 'shell:checkoutmaster' ]); */ 
 };

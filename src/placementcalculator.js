@@ -32,16 +32,21 @@ function PlacementCalculator(options) {
 
 		if (isSvgElement(element)) {
 			position = getSvgPlacement(element, placementBase);
-		} else if(options && options.nearCursor) {
-			position = {
-				top: session.currentY,
-				left: session.currentX
-			};
+		} else if (options && options.nearMouse) {
+			var objectWidth = element.outerWidth();
+			if (objectWidth < session.windowWidth / 10) {
+				position = getHtmlPlacement(element, placementBase);
+			} else {
+				position = {
+					top: session.currentY,
+					left: session.currentX
+				};
+			} 
 		} else {
 			position = getHtmlPlacement(element, placementBase);
 		}
-		//console.log(element.offset().left, position.left, session.windowWidth, tipWidth, element.width());
-		//if (element.offset().left + element.width() >= session.currentX) {}
+		// console.log(element.offset().left, position.left, session.windowWidth, tipWidth, element.width());
+		// if (element.offset().left + element.width() >= session.currentX) {}
 
 		// calculate the appropriate x and y position in the document
 		switch (placement) {

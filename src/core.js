@@ -190,7 +190,7 @@ $.fn.powerTip.defaults = {
 	placement: 'n',
 	smartPlacement: false,
 	limitTopBottom: false,
-	nearCursor : false,
+	nearMouse: false,
 	offset: 10,
 	mouseOnToPopup: false,
 	manual: false,
